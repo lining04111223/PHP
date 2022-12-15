@@ -46,3 +46,23 @@ if (condition) {
 $t=date("H");
 echo"$t";
 
+$t = date('H');
+
+if ($t < 12) {
+  echo 'Have a good morning!';
+} elseif ($t < 17) {
+  echo 'Have a good afternoon!';
+} else {
+  echo 'Have a good evening!';
+}
+
+// Check if an array is empty
+// The isset() function will generate a warning or e-notice when the variable does not exists. The empty() function will not generate any warning or e-notice when the variable does not exists.
+
+$posts = [];
+
+if (!empty($posts[0])) {
+  echo $posts[0];
+} else {
+  echo 'There are no posts';
+}
